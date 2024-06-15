@@ -45,12 +45,10 @@
                     <div class="dropdown text-end">
                         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            @if (Storage::exists('images/users/' . auth()->user()->profile_image))
+                           
                                 <img src="{{ Storage::url('images/users/' . auth()->user()->profile_image) }}"
-                                    width="32" height="32">
-                            @else
-                                <img src="{{ asset('storage/images/default-user.png') }}" class="rounded-circle">
-                            @endif
+                                    width="32" height="32" class="rounded-circle"> 
+                        
                         </a>
                         <ul class="dropdown-menu text-small" >
                             <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>

@@ -32,15 +32,11 @@
 
                     <article class="blog-post">
                         <p>
-                            @if ($posts->featured_image && Storage::exists('images/posts/' . $posts->featured_image))
-                                <a href="{{ asset('storage/images/posts/' . $posts->featured_image) }}">
-                                    <img src="{{ asset('storage/images/posts/' . $posts->featured_image) }}"
+                        
+                                <a href="{{ Storage::url('images/posts/' . $posts->featured_image) }}">
+                                    <img src="{{ Storage::url('images/posts/' . $posts->featured_image) }}"
                                         class="card-img-top">
-                                </a>
-                            @else
-                                <img src="{{ asset('storage/images/posts/no-image.jpg') }}" width="50%" class="card-img-top">
-                                <h1>{{ Storage::exists('images/posts/' . $posts->featured_image) }} test</h1>
-                            @endif
+                            
                         </p>
 
                         {!! preg_replace(

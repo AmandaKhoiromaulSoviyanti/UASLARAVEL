@@ -18,13 +18,8 @@
                             <div class="col">
                                 <div class="card border-0 bg-light-subtle rounded-3 shadow">
                                     <a href="{{ route('posts.show', ['slug' => $searchResult->slug]) }}">
-                                        @if ($searchResult->featured_image && Storage::exists('images/posts/' . $searchResult->featured_image))
                                             <img src="{{ asset('storage/images/posts/' . $searchResult->featured_image) }}"
                                                 class="card-img-top">
-                                        @else
-                                            <img src="{{ asset('storage/images/no-image.jpg') }}"
-                                                class="card-img-top">
-                                        @endif
                                     </a>
                                     <div class="card-body">
                                         <h5 class="card-title">

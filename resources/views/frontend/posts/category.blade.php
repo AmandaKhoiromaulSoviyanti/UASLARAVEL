@@ -17,13 +17,10 @@
                         @foreach ($post_category as $postCategory)
                             <div class="col-lg-6">
                                 <div class="card border-0 bg-light rounded-4">
-                                    @if ($postCategory->featured_image && Storage::exists('images/posts/' . $postCategory->featured_image))
+                                    
                                         <img src="{{ asset('storage/images/posts/' . $postCategory->featured_image) }}"
                                             class="card-img-top">
-                                    @else
-                                        <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
-                                    @endif
-
+                                    
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             <a href="{{ route('posts.show', ['slug' => $postCategory->slug]) }}"

@@ -83,7 +83,7 @@ class CategoryController extends Controller
     {
         $data = [
             'page_title' => 'Edit ' . $this->module,
-            'categories' => $category,
+            'category' => $category,
         ];
 
         return view('backend.category.edit', $data);

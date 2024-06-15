@@ -23,7 +23,6 @@ class PostController extends Controller
     {
         $this->module = 'Post';
         $this->categories = Category::all();
-        $this->users = User::all();
     }
 
     public function index()
@@ -31,7 +30,6 @@ class PostController extends Controller
         $data = [
             'page_title'    => 'My Post',
             'categories'    => $this->categories,
-            'users'         => $this->users,
             'posts'         => Post::with(['category', 'tags', 'user'])->get(),
         ];
 

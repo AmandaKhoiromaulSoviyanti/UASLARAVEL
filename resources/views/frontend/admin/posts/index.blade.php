@@ -3,7 +3,6 @@
 @section('content')
 <section id="latest-post">
     <div class="container mb-3">
-        <h1>{{ $page_title }}</h1>
         <div class="card">
             <div class="card-body">
                 <a href="{{ route('author.posts.create') }}" class="btn btn-primary mb-3"><i class="fa fa-plus"></i> New</a>

@@ -5,12 +5,8 @@
                 <div class="col-lg-4">
                     <div class="card bg-light rounded-4 shadow border-0">
                         <a href="{{ route('posts.show', ['slug' => $latestPost->slug]) }}">
-                            @if ($latestPost->featured_image && Storage::exists('images/posts/' . $latestPost->featured_image))
                                 <img src="{{ asset('storage/images/posts/' . $latestPost->featured_image) }}"
                                     class="card-img-top">
-                            @else
-                                <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
-                            @endif
                         </a>
 
                         <div class="card-body">
